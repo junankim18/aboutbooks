@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def main(request):
+    user = request.user
+    ctx = {
+        'user': user
+    }
+    return render(request, 'main.html', ctx)

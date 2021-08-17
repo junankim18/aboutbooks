@@ -44,7 +44,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'aboutbooks.CustomUser'
+# AUTH_USER_MODEL = 'aboutbooks.User'
 
 # Application definition
 

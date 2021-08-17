@@ -1,6 +1,5 @@
-<h1>aboutbooks</h1>
-</br>
-<h2> head developer <b>junan kim</b></h2></br>
-<h2>ai developer <b>donghun lee</b></h2></br>
-<h2>designer, frontend developer <b>min park</b></h2></br>
-<h2>js,backend developer <b>serin ryu</b></h2>
+<h2>aboutbooks</h2>
+<h4> head developer <span><h3 style='display:inline; color:#05367B;'>junan kim</h3></span></h4>
+<h4>ai, backend developer <span><h3 style='display:inline; color:#05367B;'>donghun lee</h3></span></h4>
+<h4>designer, frontend developer <span><h3 style='display:inline; color:#05367B;'>min park</h3></span></h4>
+<h4>js, backend developer <span><h3 style='display:inline; color:#05367B;'>serin ryu</h3></span></h4>

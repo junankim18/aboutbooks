@@ -1,6 +1,6 @@
-aboutbooks
+<h1>aboutbooks</h1>
 </br>
-head developer junan kim</br>
-ai developer donghun lee</br>
-designer, frontend developer min park</br>
-js,backend developer serin ryu
+<h2> head developer <b>junan kim</b></h2></br>
+<h2>ai developer <b>donghun lee</b></h2></br>
+<h2>designer, frontend developer <b>min park</b></h2></br>
+<h2>js,backend developer <b>serin ryu</b></h2>

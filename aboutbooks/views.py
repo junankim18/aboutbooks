@@ -7,3 +7,23 @@ def main(request):
         'user': user
     }
     return render(request, 'main.html', ctx)
+
+
+def perword(request):
+    user = request.user
+    ctx = {
+        'user': user
+    }
+    return render(request, 'perword.html', ctx)
+def persilent(request):
+    user = request.user
+    ctx = {
+        'user': user
+    }
+    return render(request, 'persilent.html', ctx)
+def subsilent(request):
+    user = request.user
+    ctx = {
+        'user': user
+    }
+    return render(request, 'subsilent.html', ctx)

@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <title>aboutBooks</title>
+        <style>
+            html,
+            body,
+            div,
+            span,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            a,
+            img,
+            i,
+            ol,
+            ul,
+            li,
+            form,
+            label{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article,
+            aside,
+            details,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol,
+            ul {
+                list-style: none;
+            }
+            blockquote,
+            q {
+                quotes: none;
+            }
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
+                content: "";
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .navbar {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                position:fixed;
+                background-color: #D4F0FF;
+                width:100%;
+                max-width:800px;
+                height:7vh;
+                border-bottom: 2px solid #FF9F50;
+            }
+
+            {% block stylecontent %}{% endblock stylecontent %}
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href=""><img src="{%static 'logo.png'%}" alt="" height="32" /></a>
+            <a href="" style = "text-decoration:none; color:#FF9F50;"> 신청하기</a>
+        </div>
+        {% block content %}{% endblock content %}
+        <div>
+            <p>copyright</p>
+        </div>
+    </body>
+</html>

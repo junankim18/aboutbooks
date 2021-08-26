@@ -1,51 +1,62 @@
 {% extends "base.html" %}
 <div>
     {% load static %} {% block stylecontent %} 
-    .firstbox{ 
-        color:yellow; 
-        background-image: url('https://picsum.photos/id/187/700/400?grayscale'); 
+    .firstbox{
+        font-family: 'Pretendard-Light';
+        color:white; 
+        background-image: url('/static/mainchild_long_center.jpg');
+        background-size: cover; 
+        background-position: 100%;
         width:100%;
         max-width:600px;
-        margin:auto;
+        margin: auto;
         margin-top:0;
-        height:60vh;
+        height:70vh;
         padding-top:80px;
         display:flex;
         flex-direction:column;
-        justify-content: center;
+        justify-content: flex-end;
+        text-align:center;
+        text-shadow:0 8px 25px #000000;
     } 
-    .secondbox{ 
-        color:yellow; 
-        background-color:#0D76D0;
+    .secondbox{
+        font-family: 'Pretendard-Light';
+        background-image: url('/static/silentbook_op.png');
+        background-size:contain;
         width:100%;
         max-width:600px;
         margin:auto;
         margin-top:15px;
-        height:30vh;
-    } 
-    .thirdbox{ 
-        color:yellow; 
-        background-color:#0D76D0;
+        height:38vh;
+        text-align: center;
+    }
+    .thirdbox{
+        font-family: 'Pretendard-Light';
         width:100%;
         max-width:600px;
         margin:auto;
         margin-top:15px;
-        height:30vh;
-    } 
+        height:20vh;
+        text-align: center;
+    }
     .stepbox{
+        font-family: 'Pretendard-Light';
+        background-color:white;
         width:80%;
         border-radius: 7px;
         max-width:400px;
-        height:20vh;
+        height:30vh;
         margin: auto;
         margin-top:15px;
         box-shadow:0 8px 25px #bfc2c7;
+        text-align: center;
     }
     .trialbutton{
+        font-family: 'Pretendard-Light';
         border: none;
-        border-radius: 7px;
+        border-radius: 20px;
         background-color: white;
-        color: #0D76D0;
+        color: #5000FF;
         width:40%;
         max-width:250px;
         height:7vh;
@@ -54,102 +65,181 @@
         box-shadow:0 8px 25px #bfc2c7;
     }
     .trialbutton:hover{
-        background-color: #0D76D0;
+        background-color: #5000FF;
         color: white;
 
     }
     .curationbox{
-        color:yellow; 
-        background-color:#261A40;
+        font-family: 'Pretendard-Light';
+        background-color:#F7F7F7;
         width:100%;
         max-width:400px;
         margin:auto;
         height:40vh;
         margin: auto;
         margin-top:15px;
+        text-align:center;
     }
     .libbutton{
+        font-family: 'Pretendard-Light';
         border: none;
-        border-radius: 7px;
+        border-radius: 20px;
         background-color: white;
-        color: #0D76D0;
+        color:#5000FF;
         width:40%;
         max-width:400px;
         height:7vh;
         margin-left: 30%;
         margin-top:15px;
+        box-shadow:0 8px 25px #7A7A7A;
     }
     .libbutton:hover{
-        background-color: #0D76D0;
+        background-color: #5000FF;
         color: white;
 
     }
-    .promobox{
+    .textbox{
+        font-family: 'Pretendard-Light';
         width:100%;
         max-width:600px;
         margin:auto;
         margin-top:15px;
-        height:30vh;
-        background-color: orange;
-        color:blue;
+        height:18vh;
+        text-align: center;
+    }
+    .promobox{
+        font-family: 'Pretendard-Light';
+        color:white;
+        background-color: #5000FF;
+        max-width:400px;
+        height:12vh;
+        margin: auto;
+        margin-top:15px;
+        box-shadow:0 8px 25px #bfc2c7;
+        text-align: center;
     }
     .wrapbox{
         display:flex;
         flex-direction:column;
 
     }
-    .quote{
-        font-style:italic;
+    .container{
+        margin:0 auto;
+        margin-top:20px;
+        position: relative;
+        width:70%;
+        height:0;
+        padding-bottom:40%;
+        background:#4c4c4c;
+        border: solid 10px #2c2c2c;
     }
-
+    .slide_img{
+        position: absolute;
+        width:100%;
+        height:100%;
+        z-index:-1;
+    }
+    .slide_img img{
+        position: absolute;
+        width:100%;
+        height:100%;
+    }
+    #i1,#i2,#i3{
+        display:none;
+    } 
+    .pre, .nxt{
+        width:12%;
+        height:100%;
+        position:absolute;
+        top:0;
+        background: rgb(88,88,88,.4);
+        z-index:99;
+        cursor:pointer;
+    }
+    .pre{
+        left:0;
+    }
+    .nxt{
+        right:0;
+    }
+    .navside{
+        width:100%;
+        height:11px;
+        bottom:12%;
+        position:absolute;
+        text-align:center;
+        z-index:99;
+    }
+    .dots{
+        top:-5px;
+        width:10px;
+        height:10px;
+        margin:0 4px;
+        position: relative;
+        border-radius:50%;
+        display:inline-block;
+        background:rgba(0,0,0,0.6);
+    }
+    #i1:checked ~ #one,
+    #i2:checked ~ #two,
+    #i3:checked ~ #three{
+        z-index:9;
+    }
+    
+    
     {% endblock stylecontent %}
 </div>
 <div>
     {% block content%}
 <div class='mainbox'>
     <div class="firstbox">
-        <h1 class='firsttext'>우리 아이를 위한 글 없는 그림책 구독 서비스</h1>
-        <br>
-        <h3>개성넘치는 우리 아이들이 상상할 수 있는 그림책만을 선정해서 매주 4권씩 배송합니다.</h3>
-        <button class='libbutton'><h3> 바로 신청하기</h3></button>
+        <h1 class='firsttext' style = "line-height: 120%;">우리 아이를 위한 <br> 글 없는 그림책 구독 서비스</h1><br>
+        <p style = "line-height: 120%;" >개성넘치는 우리 아이가 상상할 수 있는<br> <b> 좋은 그림책만</b>을 선정하여 매주 4권씩 배송합니다.</p>
+        <button class='libbutton'><h3> 바로 신청하기</h3></button><br>
     </div>
     <div class="secondbox">
-        <h3>어바웃북스가 silent book을 선택한 이유</h3>
+        <br><br><h3>어바웃북스가 <span style="color:#5000FF;">'Silent Book'</span>을 선택한 이유</h3><br>
         <br>
-        <p class='quote'>"읽어주려 하지 말고 아이의 이야기를 들어 주세요. 글 없는 그림책을 외국에서는 'silient book'이라고 하던데, 사실은 매우 시끄러운 책이에요. 아이가 자기 생각을 이야기 하느라 바쁘거든요. 아이와의 대화로 가득 하게 해 주세요."</p>
-        <p class='quote'>(선, 이수지 작가의 말 중에서)</p>
+        <p class='quote' style = "line-height: 130%;" >"읽어주려 하지 말고 <b>아이의 이야기를 들어 주세요.</b> <br>글 없는 그림책을 외국에서는 'silient book'이라고 하던데, <br>사실은 매우 시끄러운 책이에요. <br>아이가 자기 생각을 이야기 하느라 바쁘거든요. <br><b>아이와의 대화로 가득 하게 해 주세요.</b>"</p>
+        <p class='quote'><br>(선, 이수지 작가의 말 중에서)</p>
     </div>
     <div class="thirdbox">
-        <h1>아이의 연령별로 맞춤형 주제를 선정해서 도서를 제공합니다</h1>
+        <br><h3 style = "line-height: 150%;">'어바웃북스'는 </h3>
+        <h2 style = "line-height: 150%;"> 아이의 <span style="color:#5000FF;">연령별로 맞춤형 주제</span>를 </h2>
+        <h3 style = "line-height: 150%;">직접 선정하여 도서를 제공합니다</h3>
     </div>
     <div class='stepbox'>
-        <h2>이번 주차 주제 가이드와 함께 추천도서 매주 4권 받아보기</h2>
+        <br><h5>Step 1.</h5>
+        <img src="{%static 'whatcomes_con.png'%}" alt="" height = "85vh">
+        <p style = "line-height: 130%;"><br> 이번 주 <b>주제 레포트* </b>와 <br> 추천 그림책 <b>매주 4권</b> 받아보기</p>
     </div>
     <div class='stepbox'>
-        <h2>마음에 드는 책 평가하기</h2>
+        <br><h5>Step 2.</h5>
+        <img src="{%static 'rate_blue.jpg'%}" alt="" height = "90vh">
+        <p style = "line-height: 130%;"> 책을 읽은 이후, <br><b> 아이가 좋아하는 책 </b> 선택하기</p>
     </div>
     <div class='stepbox'>
-        <h2>문앞에서 바로 반납하기</h2>
-    </div>
-    <div class='stepbox'>
-        <h3>아이별 분석, 도서 선정, 배송, 소독까지 모든 과정은 어바웃북스에서 담당합니다. 집에서 클릭 한 번으로 모든 서비스를 경험해보세요!</h3>
+        <br><h5>Step 3.</h5><br>
+        <img src="{%static 'door_box.png'%}" alt="" height = "95vh">
+        <p><br>문 앞에서 <b> 편리하게 반납</b>하기 </p>
     </div>
     <div class='wrapbox'>
         <button class='trialbutton'><h3> 바로 신청하기</h3></button>
     </div>
-    <div class='promobox'>
-        <h3>체험단 이벤트!</h3>
-        <br>
-        <h3>어바웃북스를 프로모션 가격 19000원으로 한 달간 체험해 보세요</h3>
+    
+    <div class = 'promobox'>
+        <h5><br> 체험단 EVENT <br><br></h5>
+        <p> 프로모션 가격 <b style="text-size:larger;">18,900원</b> 으로 첫 달 구독하세요 </p>
     </div>
     <div class='curationbox'>
-        <h2>책은 어떻게 선정하나요?</h2>
+        <div class='curationbox'>
+        <h2> <br> 책은 어떻게 선정하나요?</h2>
         <br>
-        <h3>어바웃북스는 아이들이 세상을 균형잡힌 시각으로, 건강하게 바라보기를 바랍니다.  </h3>
+        <p> '어바웃북스'는 아이들이 세상을 <span style="color:#5000FF;"><b>균형잡힌<br> </b></span>시각으로 <span style="color:#5000FF;"><b>건강하게</b></span> 바라보기를 바라는 마음으로,  </p>
         <br>
-        <h3>일반 전집에는 없는 수상작과 최신 도서 위주로 엄격하게 선정합니다. </h3>
-        <button class='libbutton'><h3>책 리스트 보러가기</h3></button>
+        <p>일반 전집에서는 찾아보기 힘든<br> <span style="color:#5000FF;"><b>수상작</b></span>과 <span style="color:#5000FF;"><b>최신 도서</b></span> 위주로 엄격하게 선정합니다. </p>
     </div>
+
 </div>
     {% endblock content %}
 </div>

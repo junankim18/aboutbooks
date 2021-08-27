@@ -80,13 +80,16 @@
                 border-bottom: 2px solid white;
                 line-height: 3vh;
             }
+            .navimage{
+                margin-left:10px;
+            }
             .navbar_button {
                 text-decoration:none; 
                 color:white; 
                 border: 1px solid white; 
                 border-radius: 20px; 
                 height:3vh;
-                width: 20%;
+                width: 80px;
                 text-align:center;
                 vertical-align:middle;
                 font-size:small;
@@ -111,7 +114,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href=""><img src="{%static 'logo_white.png'%}" alt="" height="32" /></a>
+            <div class="navimage"> <a href=''> <img src="{%static 'logo_white.png'%}" alt="" height="32" /></a> </div>
             <a href="" class = "navbar_button"> 신청하기</a>
         </div>
         {% block content %}{% endblock content %}

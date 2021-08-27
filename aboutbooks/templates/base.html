@@ -106,6 +106,17 @@
                 font-weight: 300;
                 font-style: normal;
             }
+            .footerbox{
+                font-family: 'Pretendard-Light';
+                background-color: white;
+                height: 9vh;
+                color: #5000FF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-top: 2px solid #5000FF;
+            }
 
 
 
@@ -118,8 +129,10 @@
             <a href="" class = "navbar_button"> 신청하기</a>
         </div>
         {% block content %}{% endblock content %}
-        <div>
-            <p>copyright</p>
+        <div class='footerbox'>
+            <p>copyright 2021, 어바웃북스(aboutBooks)</p>
+            <p>all rights reserved</p>
+            <p>대표 연락처 010-9463-3187</p>
         </div>
     </body>
 </html>

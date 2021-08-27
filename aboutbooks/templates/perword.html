@@ -73,9 +73,9 @@
         max-width:400px;
         margin:auto;
         height:40vh;
-        margin: auto;
         margin-top:15px;
         text-align:center;
+        padding-bottom:160px;
     }
     .libbutton{
         font-family: 'Pretendard-Light';
@@ -137,13 +137,12 @@
     }
     .container{
         margin:0 auto;
-        margin-top:20px;
+        margin-top:40px;
         position: relative;
         width:70%;
         height:0;
         padding-bottom:40%;
         background:#4c4c4c;
-        border: solid 10px #2c2c2c;
     }
     .slide_img{
         position: absolute;
@@ -152,11 +151,10 @@
         z-index:-1;
     }
     .slide_img img{
-        position: absolute;
         width:100%;
         height:100%;
     }
-    #i1,#i2,#i3{
+    #i1,#i2,#i3,#i4,#i5,#i6,#i7,#i8{
         display:none;
     } 
     .pre, .nxt{
@@ -164,7 +162,7 @@
         height:100%;
         position:absolute;
         top:0;
-        background: rgb(88,88,88,.4);
+        background: rgba(36,46,99,.6);
         z-index:99;
         cursor:pointer;
     }
@@ -183,18 +181,23 @@
         z-index:99;
     }
     .dots{
+        display:hidden;
         top:-5px;
         width:10px;
         height:10px;
         margin:0 4px;
         position: relative;
         border-radius:50%;
-        display:inline-block;
         background:rgba(0,0,0,0.6);
     }
     #i1:checked ~ #one,
     #i2:checked ~ #two,
-    #i3:checked ~ #three{
+    #i3:checked ~ #three,
+    #i4:checked ~ #four,
+    #i5:checked ~ #five,
+    #i6:checked ~ #six,
+    #i7:checked ~ #seven,
+    #i8:checked ~ #eight{
         z-index:9;
     }
     
@@ -257,40 +260,81 @@
         <br>
         <p>일반 전집에서는 찾아보기 힘든<br> <span style="color:#5000FF;"><b>수상작</b></span>과 <span style="color:#5000FF;"><b>최신 도서</b></span> 위주로 엄격하게 선정합니다. </p>
     </div>
+                <div class='container'>
+                    <input type="radio" name="images" id="i1" checked>
+                    <input type="radio" name="images" id="i2">
+                    <input type="radio" name="images" id="i3">
+                    <input type="radio" name="images" id="i4">
+                    <input type="radio" name="images" id="i5">
+                    <input type="radio" name="images" id="i6">
+                    <input type="radio" name="images" id="i7">
+                    <input type="radio" name="images" id="i8">
+                
+                    <div class='slide_img' id='one'>
+                        <img src="{% static 'word/forest.png' %}" alt="">
+                        <label for="i8" class='pre'></label>
+                        <label for="i2" class='nxt'></label>
+                    </div>
+                    
+                    <div class='slide_img' id='two'>
+                        <img src="{% static 'word/forest_1.png' %}" alt="">
+                        <label for="i1" class='pre'></label>
+                        <label for="i3" class='nxt'></label>
+                    </div>
+                    <div class='slide_img' id='three'>
+                    
+                        <img src="{% static 'word/fox.png' %}" alt="">
+                        <label for="i2" class='pre'></label>
+                        <label for="i4" class='nxt'></label>
+                    </div>
+                    <div class='slide_img' id='four'>
+                    
+                        <img src="{% static 'word/fox_1.png' %}" alt="">
+                        <label for="i3" class='pre'></label>
+                        <label for="i5" class='nxt'></label>
+                    </div>
+                    <div class='slide_img' id='five'>
+                    
+                        <img src="{% static 'word/frog.png' %}" alt="">
+                        <label for="i4" class='pre'></label>
+                        <label for="i6" class='nxt'></label>
+                    </div>
+                    <div class='slide_img' id='six'>
+                    
+                        <img src="{% static 'word/frog_1.png' %}" alt="">
+                        <label for="i5" class='pre'></label>
+                        <label for="i7" class='nxt'></label>
+                    </div>
+                    <div class='slide_img' id='seven'>
+                    
+                        <img src="{% static 'word/mice.png' %}" alt="">
+                        <label for="i6" class='pre'></label>
+                        <label for="i8" class='nxt'></label>
+                    </div>
+                    <div class='slide_img' id='eight'>
+                    
+                        <img src="{% static 'word/mice_1.png' %}" alt="">
+                        <label for="i7" class='pre'></label>
+                        <label for="i1" class='nxt'></label>
+                    </div>
+                    <div class='navside'>
+                        <label class="dots" id='dot1' for='i1'></label>
+                        <label class="dots" id='dot3' for='i8'></label>
+                        <label class="dots" id='dot2' for='i7'></label>
+                        <label class="dots" id='dot2' for='i6'></label>
+                        <label class="dots" id='dot2' for='i5'></label>
+                        <label class="dots" id='dot2' for='i4'></label>
+                        <label class="dots" id='dot2' for='i3'></label>
+                        <label class="dots" id='dot2' for='i2'></label>
+                
+                    </div>
+                
+                </div>
+            </div>
+        </div>
 </div>
-</div>
 
-    <div class='container'>
-        <input type="radio" name="images" id="i1" checked>
-        <input type="radio" name="images" id="i2">
-        <input type="radio" name="images" id="i3">
-
-        <div class='slide_img' id='one'>
-            <img src="{% static 'us.jpg' %}" alt="">
-            <label for="i3" class='pre'></label>
-            <label for="i2" class='nxt'></label>
-        </div>
-        
-        <div class='slide_img' id='two'>
-            <img src="{% static 'truman.png' %}" alt="">
-            <label for="i1" class='pre'></label>
-            <label for="i3" class='nxt'></label>
-        </div>
-        <div class='slide_img' id='three'>
-        
-            <img src="{% static 'minari.jpg' %}" alt="">
-            <label for="i2" class='pre'></label>
-            <label for="i1" class='nxt'></label>
-        </div>
-        <div class='navside'>
-            <label class="dots" id='dot1' for='i1'></label>
-            <label class="dots" id='dot3' for='i3'></label>
-            <label class="dots" id='dot2' for='i2'></label>
-
-        </div>
 
     </div>
-
-</div>
-    {% endblock content %}
+        {% endblock content %}
 </div>

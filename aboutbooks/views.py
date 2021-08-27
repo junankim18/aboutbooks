@@ -27,3 +27,9 @@ def subsilent(request):
         'user': user
     }
     return render(request, 'subsilent.html', ctx)
+def test(request):
+    user = request.user
+    ctx = {
+        'user': user
+    }
+    return render(request, 'subsilent.html', ctx)

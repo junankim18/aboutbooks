@@ -9,5 +9,6 @@ urlpatterns = [
     path('', main, name='main'),
     path('perword', perword, name='perword'),
     path('persilent', persilent, name='persilent'),
-    path('subsilent', subsilent, name='subsilent')
+    path('subsilent', subsilent, name='subsilent'),
+    path('test', test, name='test')
 ]

@@ -84,10 +84,10 @@
                 margin-left:10px;
             }
             .navbar_button {
-                text-decoration:none; 
-                color:white; 
-                border: 1px solid white; 
-                border-radius: 20px; 
+                text-decoration:none;
+                color:white;
+                border: 1px solid white;
+                border-radius: 20px;
                 height:3vh;
                 width: 80px;
                 text-align:center;
@@ -97,7 +97,7 @@
                 margin-right:10px;
             }
             .navbar_button:hover {
-                background-color: white; 
+                background-color: white;
                 color: #5000FF;
             }
             @font-face {
@@ -125,11 +125,13 @@
     </head>
     <body>
         <div class="navbar">
-            <div class="navimage"> <a href=''> <img src="{%static 'logo_white.png'%}" alt="" height="32" /></a> </div>
-            <a href="#subscribe" class = "navbar_button"> 신청하기</a>
+            <div class="navimage">
+                <a href=""> <img src="{%static 'logo_white.png'%}" alt="" height="32" /></a>
+            </div>
+            <a href="#subscribe" class="navbar_button"> 신청하기</a>
         </div>
         {% block content %}{% endblock content %}
-        <div class='footerbox'>
+        <div class="footerbox">
             <p>copyright 2021, 어바웃북스(aboutBooks)</p>
             <p>all rights reserved</p>
             <p>대표 연락처 010-9463-3187</p>

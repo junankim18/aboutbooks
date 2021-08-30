@@ -39,3 +39,7 @@ def test(request):
         'user': user
     }
     return render(request, 'test.html', ctx)
+
+
+def brand(request):
+    return render(request, 'brand.html')
